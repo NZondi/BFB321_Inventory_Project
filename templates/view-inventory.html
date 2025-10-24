@@ -121,7 +121,8 @@
                 </div>
             </div>
         </div>
-
+   
+</div>
         <!-- Inventory Table -->
         <div class="row">
             <div class="col-12">
@@ -147,13 +148,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    {% for product in products %}
                                     <tr>
-                                        <td>ELEC-001</td>
-                                        <td>Samsung Galaxy S23</td>
-                                        <td><span class="badge bg-primary">Electronics</span></td>
-                                        <td>25</td>
-                                        <td>$899.99</td>
-                                        <td>$22,499.75</td>
+                                        <td>{{product.sku}}</td>
+                                        <td>{{product.product_name}}</td>
+                                        <td><span class="badge bg-primary"></span></td>
+                                        <td>{{product.quantity}}</td>
+                                        <td>{{product.price}}</td>
+                                        <td></td>
                                         <td><span class="badge bg-success">In Stock</span></td>
                                         <td>
                                             <button class="btn btn-sm btn-warning me-1">
@@ -164,91 +166,7 @@
                                             </button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>ELEC-002</td>
-                                        <td>iPhone 14 Pro</td>
-                                        <td><span class="badge bg-primary">Electronics</span></td>
-                                        <td>15</td>
-                                        <td>$999.00</td>
-                                        <td>$14,985.00</td>
-                                        <td><span class="badge bg-success">In Stock</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-warning me-1">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-info">
-                                                <i class="bi bi-eye"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>ACC-001</td>
-                                        <td>AirPods Pro</td>
-                                        <td><span class="badge bg-secondary">Accessories</span></td>
-                                        <td>3</td>
-                                        <td>$249.00</td>
-                                        <td>$747.00</td>
-                                        <td><span class="badge bg-warning">Low Stock</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-warning me-1">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-info">
-                                                <i class="bi bi-eye"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>CLOTH-001</td>
-                                        <td>Nike Air Max</td>
-                                        <td><span class="badge bg-info">Clothing</span></td>
-                                        <td>0</td>
-                                        <td>$120.00</td>
-                                        <td>$0.00</td>
-                                        <td><span class="badge bg-danger">Out of Stock</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-warning me-1">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-info">
-                                                <i class="bi bi-eye"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>BOOK-001</td>
-                                        <td>JavaScript: The Definitive Guide</td>
-                                        <td><span class="badge bg-success">Books</span></td>
-                                        <td>45</td>
-                                        <td>$45.99</td>
-                                        <td>$2,069.55</td>
-                                        <td><span class="badge bg-success">In Stock</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-warning me-1">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-info">
-                                                <i class="bi bi-eye"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>TOOL-001</td>
-                                        <td>Cordless Drill Set</td>
-                                        <td><span class="badge bg-warning">Tools</span></td>
-                                        <td>8</td>
-                                        <td>$89.99</td>
-                                        <td>$719.92</td>
-                                        <td><span class="badge bg-success">In Stock</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-warning me-1">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-info">
-                                                <i class="bi bi-eye"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
+                                    {% endfor %}
                                 </tbody>
                             </table>
                         </div>
